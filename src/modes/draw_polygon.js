@@ -66,7 +66,7 @@ module.exports = function(ctx) {
     stop: function() {
       ctx.ui.queueMapClasses({ mouse: Constants.cursors.NONE });
       doubleClickZoom.enable(ctx);
-      ctx.ui.setActiveButton();
+      ctx.ui.setActiveButton(Constants.types.POLYGON);
 
       // check to see if we've deleted this feature
       if (ctx.store.get(polygon.id) === undefined) return;
